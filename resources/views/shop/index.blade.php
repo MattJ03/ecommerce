@@ -14,6 +14,9 @@
                 <h2>{{ $product->name }}</h2>
                 <p1>{{ $product->description }}</p1>
                 <p2>Price: $ {{$product->price}}</p2>
+                <a href="{{ route('product.show', $product->id) }}">
+                    <button>Show</button>
+                </a>
             @endforeach
 
 
