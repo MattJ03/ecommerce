@@ -12,6 +12,21 @@ body {
     background-color: #333333;
 }
 
+.btn-show {
+    display: inline-block;
+    width: 2rem;
+    background-color: blue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    font-family: sans-serif Arial;
+}
+
+.btn-show:hover {
+    background-color: darkblue;
+}
+
 header {
     background-color: #333333;
     font-family: sans-serif;
@@ -41,5 +56,13 @@ nav {
 }
 
 main {
+    padding: 2rem;
+}
 
+footer {
+    margin-bottom: 1rem;
+    background: magenta;
+    color: #333333;
+    padding: 2px 0;
+    text-align: center;
 }

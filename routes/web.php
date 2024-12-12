@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ShopController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,7 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
 Route::post('/product/create', [ProductController::class, 'create'])->name('products.create');
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('products.edit');
