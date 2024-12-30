@@ -20,10 +20,34 @@
         @method('PUT')
 
     <div class="form-group">
-        <label for="name">Product Name</label>
-        <input type="text">
-        <
+    <label for="name">Product Name</label>
+        <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            value="{{ old('name', $product->name) }}"
+            required>
     </div>
 
+   <div class="form-group">
+       <label for="description">Description</label>
+    <textarea
+    name="description"
+    id="description"
+    class="form-control"
+    rows="5"
+    required="{{ old('description', $product->description) }}"></textarea>
+   </div>
 
+    <div class="form-group">
+        <label for="price">Price</label>
+    <input
+    type="number"
+    name="price"
+    id="price"
+    class="form-control"
+    step="0.01"
+    value="{{ old('price', $product->price) }}"
+    required>
 @endsection
