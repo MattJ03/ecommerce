@@ -50,4 +50,18 @@
     step="0.01"
     value="{{ old('price', $product->price) }}"
     required>
+    </div>
+
+    <div class="form-group">
+        <label for="category_id">Category</label>
+        <select name="category_id" id="category_id" class="form-control" required>
+            @foreach($categories as $category)
+                <option value="{{ $category->id }}"
+            @endforeach
+        </select>
+    </div>
+
+
+
+
 @endsection
