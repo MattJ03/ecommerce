@@ -7,6 +7,7 @@
     <div class="container">
         <h1>Edit Product</h1>
         @if ($errors->any())
+
             <ul>
                 @foreach($errors->all as $error)
                     <li>{{ $error}}</li>
@@ -57,11 +58,13 @@
         <select name="category_id" id="category_id" class="form-control" required>
             @foreach($categories as $category)
                 <option value="{{ $category->id }}"
+                 {{ old('category_id', $product->$category_id) === $category_id ? 'selected' : '' }}
+                {{ $category->name }}
             @endforeach
         </select>
     </div>
 
-
-
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
 
 @endsection
