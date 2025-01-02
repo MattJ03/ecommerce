@@ -7,7 +7,7 @@
     <div class="container">
         <h1>Edit Product</h1>
         @if ($errors->any())
-
+        <div class="alert alert-danger">
             <ul>
                 @foreach($errors->all as $error)
                     <li>{{ $error}}</li>
@@ -68,3 +68,4 @@
     </form>
 
 @endsection
+    </div>
